@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ImportResource;
 
+import java.util.Arrays;
+
 /**
  * @Author：MoneyOrange
  * @Date：2023/4/2/21:02
@@ -22,8 +24,8 @@ public class Application {
         log.info("SpringbootStudy项目已启动>>>");
 
         //// 2. 查看容器里面的组件
-        //String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-        //Arrays.stream(beanDefinitionNames).forEach(System.out::println);
+        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        Arrays.stream(beanDefinitionNames).forEach(System.out::println);
         //
         //Pet pet_01 = applicationContext.getBean("tom", Pet.class);
         //Pet pet_02 = applicationContext.getBean("tom", Pet.class);
@@ -48,7 +50,7 @@ public class Application {
         //boolean tom = applicationContext.containsBean("tom");
         //System.out.println("tom = " + tom);
 
-        boolean haha = applicationContext.containsBean("haha");
-        System.out.println("haha = " + haha);
+        //boolean haha = applicationContext.containsBean("haha");
+        //System.out.println("haha = " + haha);
     }
 }
